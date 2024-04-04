@@ -19,7 +19,16 @@ function onChangeEmail() {
     } else {
         email_warning_div.textContent = '';
     }
+
     const password = password_element.value.trim();
+    if(password.length < 8){
+        password_warning_div.textContent = "Make sure password is more than 8 characters.";
+        password_warning_div.style.color = "red";
+    }
+    else{
+        password_warning_div.textContent = "";
+    }
+    
     if(email.length > 3 && email.includes('@') && email.includes('.') && password.length >= 8){
         success_warning_div.textContent = "All good to go!";
         success_warning_div.style.color = "#219F35";
@@ -27,6 +36,16 @@ function onChangeEmail() {
   }
 
   function onChangePassword() {
+    const email = email_element.value.trim();
+    console.log('email:', email)
+    if (email.length < 3 || !email.includes('@') || !email.includes('.')) {
+        email_warning_div.textContent = 'Make sure email is more than 3 characters and has @ and a .';
+        email_warning_div.style.color = "red";
+    } else {
+        email_warning_div.textContent = '';
+    }
+
+
      const password = password_element.value.trim();
     if(password.length < 8){
         password_warning_div.textContent = "Make sure password is more than 8 characters.";
@@ -36,7 +55,7 @@ function onChangeEmail() {
         password_warning_div.textContent = "";
     }
 
-    const email = email_element.value.trim();
+  
     if(email.length > 3 && email.includes('@') && email.includes('.') && password.length >= 8){
         success_warning_div.textContent = "All good to go!";
         success_warning_div.style.color = "#219F35";
