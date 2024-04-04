@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="myform">
+      <div class="container">
+        <div>
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="text"
+            name="email"
+            placeholder="Example@email.com"
+          />
+        </div>
+        <div id="email_warning_div"></div>
+        <div>
+          <label for="password">Password</label>
+          <input
+            id="password"
+            type="text"
+            name="password"
+            placeholder="Your Password"
+          />
+        </div>
+        <div id="password_warning_div"></div>
+        <div id="success_warning_div"></div>
+
+        <button type="submit" id="submit_btn">Submit</button>
+      </div>
+    </form>
+  </body>
+  <script type="module" src="./script.js"></script>
+</html>
