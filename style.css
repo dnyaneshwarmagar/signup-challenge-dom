@@ -7,6 +7,8 @@
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
 }
 .container {
   display: flex;
@@ -21,20 +23,21 @@
   gap: 10px
 }
 .container > div > input{
-    height: 40px;
+    height: 45px;
     border-radius: 10px;
     padding: 5px 15px;
-    font-size: 16px;
+
+    /* border:2px solid black */
 }
 label{
     margin-left: 3px;
-    font-size: 18px;
+    margin-bottom: 5px;
 }
 .container button{
     height: 40px;
-    width: 30%;
+    width: 200px;
     border-radius: 10px;
-    font-size: 16px;
+    background-color: white;
 }
 .success_window{
     display: flex;
